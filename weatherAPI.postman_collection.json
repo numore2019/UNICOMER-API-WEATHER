@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "b2d3a654-f19a-41ef-a9cc-41cff72ba07e",
+		"name": "weatherAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30541411"
+	},
+	"item": [
+		{
+			"name": "autenticarse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"usuario1\",\r\n  \"password\": \"password1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicomer/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicomer",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener temperatura",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c3VhcmlvMSIsImlhdCI6MTc0NDM3MzAyMywiZXhwIjoxNzQ0Mzc2NjIzfQ.ljei0XT-q4XR8aHV-s9FoZ6pLie8SQlO4bC1XEYQZsdYnckdbCQMR7LaPKMpRmIvaXJ3-GBnrxVGZALg_qXSkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"San Salvador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unicomer/api/forecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unicomer",
+						"api",
+						"forecast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

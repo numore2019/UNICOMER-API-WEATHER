@@ -1,0 +1,21 @@
+spring.profiles.active:
+spring:
+  application:
+    name: "unicomer"
+  security:
+    user:
+      name: disabled
+      password: disabled
+
+service:
+  weatherapi:
+    url: http://api.weatherapi.com/v1/forecast.json
+    apikey: ea6ac94922bf41b8ad4211249232303
+
+server:
+  servlet:
+    context-path: /unicomer
+    
+jwt:
+  secret: mySuperSecretKeyThatShouldBeLongEnoughToUseWithHS512Algorithm123!
+  expiration: 3600000
